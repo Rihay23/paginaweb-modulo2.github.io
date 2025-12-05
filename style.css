@@ -32,6 +32,7 @@ header, main{
     padding: 6px, 10px;
     font-size: 14px;
     color: darkblue;
+    text-transform: uppercase;
 }
 
 /* NAV */
