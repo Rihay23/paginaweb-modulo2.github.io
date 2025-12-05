@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>Tienda Kawai</title>
 </head>
 <body>
-    <header>
+
+    <header class="top-banner">
+        <p>Evios gratis a partir de $499</p>
+    </header>
+    
+    <!-- Dejando la barra sola para aplicar position sticty -->
         <nav class="nav-principal">
             <h1 class="logo">Tienda Kawai 🌸</h1>
             <ul class="nav-lista">
@@ -22,7 +27,6 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
 
     <main>
         <!-- Catálogo -->
@@ -45,6 +49,9 @@
 
                 <!-- Producto 2 -->
                 <div class="producto-tarjeta">
+                    <!-- Agregar badge de oferta para utilizar position absolutr -->
+
+                    <span class="producto-badge">!Super Oferta Kawai!</span>
                     <img src="https://asset.action.com/image/upload/t_digital_product_image/w_1080/23189125.webp" alt="Washitape decorativo" class="producto-img">
                     <h3 class="producto-titulo">Washitape kawaii</h3>
                     <p class="producto-desc">
@@ -68,6 +75,7 @@
 
                 <!-- Producto 4 -->
                 <div class="producto-tarjeta">
+                    <span class="producto-badge">!Super Oferta Kawai!</span>
                     <img src="./img/plumas.webp" alt="Pluma de gel kawaii" class="producto-img">
                     <h3 class="producto-titulo">Plumas de gel</h3>
                     <p class="producto-desc">
@@ -131,12 +139,14 @@
                 <button type="submit">Enviar mensaje</button>
             </form>
         </aside>
-</section>
+    </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Tienda Kawai. Todos los derechos reservados.</p>
         <p>Síguenos en redes: Instagram @tiendakawai · TikTok @tiendakawai</p>
     </footer>
+
+    <a href="#catalogo" class="boton-carrito">Ver Carrito 🛒</a>
 </body>
 </html>
