@@ -1,0 +1,367 @@
+/* RESET BÁSICO 
+   - Elimina márgenes y padding por defecto
+   - Aplica box-sizing: border-box para que el ancho incluya padding/border
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define color de fondo y tipografía*/
+body{
+    font-family: "Lexend", sans-serif;
+    background-color: #0b0c0f;
+    color: #ffffff;  
+    line-height: 1.6;
+}
+
+/* Top Banner estilo HBO Max */
+.top-banner{
+    background-color: #1a1d29;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #8d8d8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #2a2d3a;
+}
+
+/* NAV - Estilo HBO Max */
+.nav-principal{
+    background-color: #0b0c0f;
+    padding: 15px 25px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2d3a;
+
+    /* agregando flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-img{
+    height: 30px;
+    width: auto;
+}
+
+/* Menú de navegación */
+.nav-lista{
+    list-style: none;
+    display: flex;
+    gap: 25px; /* espacio entre los enlaces */
+    align-items: center;
+}
+
+/* Estilo de los enlaces del menú */
+.nav-lista a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.nav-lista a:hover{
+    color: #6ee6ff; /* color cuando pasas el cursor */
+}
+
+/* Navegación derecha */
+.nav-derecha{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-buscar, .btn-iniciar{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.btn-buscar{
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #555;
+}
+
+.btn-iniciar{
+    color: #000000;
+    background-color: #6ee6ff;
+}
+
+.btn-buscar:hover{
+    background-color: #2a2d3a;
+}
+
+.btn-iniciar:hover{
+    background-color: #4dd8f5;
+}
+
+/* Banner principal */
+.banner-principal{
+    background: linear-gradient(to right, rgba(11, 12, 15, 0.8), rgba(11, 12, 15, 0.4)), 
+                url('https://images.unsplash.com/photo-1595769812725-4c6564f7528b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+.banner-contenido{
+    max-width: 600px;
+}
+
+.banner-titulo{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-desc{
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.banner-botones{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-reproducir, .btn-mas-info{
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .3s;
+    display: inline-block;
+}
+
+.btn-reproducir{
+    background-color: #6ee6ff;
+    color: #000000;
+}
+
+.btn-mas-info{
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #ffffff;
+}
+
+.btn-reproducir:hover{
+    background-color: #4dd8f5;
+}
+
+.btn-mas-info:hover{
+    background-color: rgba(109, 109, 110, 0.9);
+}
+
+/* SECCIONES DESTACADAS */
+.seccion-destacada{
+    padding: 25px 5%;
+    margin-bottom: 30px;
+}
+
+.seccion-titulo{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* CONTENEDOR DE PRODUCTOS*/
+.catalogo-contenedor{
+    padding: 10px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* TARJETA DEL PRODUCTO */
+.producto-tarjeta{
+    text-align: left;
+    background: #1a1d29;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    transition: transform .2s ease, box-shadow .2s ease;
+    /* para que la badge absoluta se posicione dentro */
+    position: relative;
+    flex: 1 1 200px; /* crece, se encoge, ancho base */
+    max-width: 250px;
+    border: 1px solid transparent;
+}
+
+/* Efecto al pasar el mouse */
+.producto-tarjeta:hover{
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    border-color: #6ee6ff;
+}
+
+/* IMAGEN DEL PRODUCTO */
+.producto-img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* ajusta imagen sin deformarse */
+    background-color: #0b0c0f;
+    margin-bottom: 10px;
+}
+
+/* TÍTULO DEL PRODUCTO */
+.producto-titulo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 10px 15px 5px 15px;
+    color: #ffffff;
+}
+
+/* DESCRIPCIÓN DEL PRODUCTO */
+.producto-desc{
+    font-size: 0.9rem;
+    color: #8d8d8d;
+    margin: 0 15px 15px 15px;
+}
+
+/* BARRAS DE PROGRESO */
+.progreso-bar{
+    height: 4px;
+    background-color: #2a2d3a;
+    border-radius: 2px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.progreso-fill{
+    height: 100%;
+    background-color: #6ee6ff;
+    width: 30%; /* valor por defecto, se puede ajustar en línea */
+}
+
+.producto-badge{
+    position: absolute;
+    background: #6ee6ff;
+    color: #000000;
+    top: 15px;
+    left: 15px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* FOOTER HBO Max */
+footer{
+    background-color: #0b0c0f;
+    color: #8d8d8d;
+    padding: 40px 5% 20px 5%;
+    margin-top: 50px;
+    border-top: 1px solid #2a2d3a;
+}
+
+.footer-contenido{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-logo .logo-img{
+    height: 25px;
+}
+
+.footer-enlaces{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.enlaces-columna h4{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.enlaces-columna ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.enlaces-columna li{
+    margin-bottom: 10px;
+}
+
+.enlaces-columna a{
+    text-decoration: none;
+    color: #8d8d8d;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.enlaces-columna a:hover{
+    color: #6ee6ff;
+}
+
+.footer-derechos{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #2a2d3a;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-principal{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .nav-lista{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .nav-derecha{
+        justify-content: center;
+    }
+    
+    .banner-titulo{
+        font-size: 2.5rem;
+    }
+    
+    .footer-enlaces{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .catalogo-contenedor{
+        justify-content: center;
+    }
+}

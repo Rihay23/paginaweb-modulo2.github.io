@@ -1,0 +1,262 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    background-color: #f7f5fa;
+    padding: 40px 20px;
+}
+
+/* CONTENEDOR GENERAL */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* ============================================
+   ESTILO 1: TARJETAS CON GRADIENTE 
+============================================ */
+.estilo1-contenedor {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.estilo1-tarjeta {
+    width: 250px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+
+.estilo1-tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.estilo1-tarjeta img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.estilo1-info {
+    padding: 20px;
+    background: linear-gradient(135deg, #b967ff 0%, #ee609c 100%);
+    color: white;
+    position: relative;
+}
+
+.estilo1-logo {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.estilo1-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.estilo1-titulo {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.estilo1-fecha {
+    font-size: 11px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.estilo1-btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.estilo1-btn:hover {
+    background: white;
+    color: #b967ff;
+}
+
+/* Ajuste para segunda tarjeta del estilo 1 (gradiente naranja) */
+.estilo1-tarjeta.naranja .estilo1-info {
+    background: linear-gradient(135deg, #ffb347 0%, #ff6b6b 100%);
+}
+
+.estilo1-tarjeta.naranja .estilo1-btn:hover {
+    color: #ff6b6b;
+}
+
+/* ============================================
+   ESTILO 2: TARJETAS DE PRODUCTOS 
+============================================ */
+.estilo2-contenedor {
+    text-align: center;
+}
+
+.estilo2-tarjeta {
+    width: 280px;
+    display: inline-block;
+    margin: 10px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.estilo2-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.estilo2-imagen-contenedor {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.estilo2-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.estilo2-corazon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.estilo2-corazon:hover {
+    background: #ff4b91;
+}
+
+.estilo2-corazon::before {
+    content: "♡";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #666;
+}
+
+.estilo2-corazon:hover::before {
+    content: "♥";
+    color: white;
+}
+
+.estilo2-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.estilo2-titulo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.estilo2-descripcion {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.estilo2-footer {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.estilo2-precio-contenedor {
+    margin-bottom: 10px;
+}
+
+.estilo2-etiqueta {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.estilo2-precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.estilo2-carrito {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+    margin-top: -35px;
+    transition: 0.3s;
+}
+
+.estilo2-carrito:hover {
+    background: #ff4b91;
+}
+
+.estilo2-carrito::before {
+    content: "🛒";
+    font-size: 18px;
+}
+
+/* Colores específicos para cada tarjeta del estilo 2 */
+.tarjeta-roja .estilo2-imagen-contenedor {
+    background-color: #d96c6c;
+}
+
+.tarjeta-verde .estilo2-imagen-contenedor {
+    background-color: #7a7555;
+}
+
+.tarjeta-gris .estilo2-imagen-contenedor {
+    background-color: #b8b8b8;
+}
