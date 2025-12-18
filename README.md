@@ -1,4 +1,4 @@
-# 🚀 Portafolio Virtual - Yahir Estrada
+# 🚀 Tienda kawai - Yahir Estrada
 
 Este es mi proyecto final del curso de HTML, donde demuestro el uso de etiquetas semánticas y estructura web básica.
 
